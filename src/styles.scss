@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  max-width: 992px;
+  margin: 0 auto;
+  font-family: Verdana, sans-serif;
+  padding: 20px;
+}
+
+button {
+  border: 1px solid darkred;
+  padding: 7px 10px;
+  border-radius: 7px;
+  margin: 15px 0;
+  background-color: transparent;
+  color: tomato;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+nav a{
+  display: inline-block;
+  border: 1px solid darkred;
+  text-decoration: none;
+  transition: 0.5s;
+  color: tomato;
+  margin-right: 10px;
+  padding: 7px 10px;
+  border-radius: 7px;
+
+  &.active {
+    background-color: tomato;
+    color: white;
+  }
+}
+
+.phrases {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  cursor: pointer;
+  margin: 2px;
+  padding: 5px 0;
+  max-width: 200px;
+  transition: 0.5s;
+  border-radius: 7px;
+
+  &:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: lightcoral;
+  }
+}

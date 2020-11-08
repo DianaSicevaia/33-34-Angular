@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "app-routing"
+    }
+  },
+  "defaultProject": "app-routing",
+  "cli": {
+    "analytics": false
+  }
 }
