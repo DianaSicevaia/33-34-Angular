@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PhraseService} from "../shared/phrase.service";
-import {Phrase} from "../shared/phrase.class";
+import {PhraseService} from "../../shared/phrase.service";
+import {Phrase} from "../../shared/phrase.class";
 import {Router} from "@angular/router";
 
 @Component({
@@ -22,3 +22,4 @@ export class PhraseListComponent implements OnInit {
     this.router.navigate(['phrase', selected.id]);
   }
 }
+
