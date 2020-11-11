@@ -23,18 +23,13 @@ export class PhraseDetailsComponent implements OnInit {
               public auth: AuthService) { }
 
   ngOnInit(): void {
-    this.activateRoute.params.subscribe((params: Params) => {
-      this.svc
-        .getPhrase(+params.id)
-        .then(res => {
-          this.phrase = res;
-          if (this.phrase) {
-            this.editValue = this.phrase.value;
-            this.editLanguage = this.phrase.language;
-          }
-        });
+    this.activateRoute.data.subscribe((data: {phrase: Phrase}) => {
+      this.phrase = data.phrase;
+      this.editValue = this.phrase.value;
+      this.editLanguage = this.phrase.language;
     });
   }
+
   goToPhrasesList(): void {
     const phraseID = this.phrase ? this.phrase.id : null;
 
